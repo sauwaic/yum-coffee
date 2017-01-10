@@ -2,8 +2,15 @@
   <%= image_tag 'yum_coffee.png' %>
 </div>
 
-
+<div class="search-bar text-center padded">
+<form action="" class="navbar-wagon-search">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-wagon-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
 <%= link_to 'View all coffee shops', coffee_shops_path%>
+</div>
 
 <br>
 <% @coffee_shops.each do |coffee_shop| %>
