@@ -1,7 +1,7 @@
 class CoffeeShopsController < ApplicationController
 
-skip_before_action :authenticate_user!
-before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!
+  before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
 
   def index
     @coffee_shops = CoffeeShop.all
@@ -10,8 +10,14 @@ before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
   def show
   end
 
-  def create
+  def new
     @coffee_shop = CoffeeShop.new
+  end
+
+  def create
+    coffee_shop = CoffeeShop.new(coffee_shop_params)
+    coffee_shop.save
+    redirect_to coffee_shop_path(coffee_shop)
   end
 
   def edit
@@ -27,6 +33,10 @@ before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
 
   def set_coffee_shop
     @coffee_shop = CoffeeShop.find(params[:id])
+  end
+
+  def coffee_shop_params
+    params.require(:coffee_shop).permit(:name, :rating, :wifi, photos: [])
   end
 
 end

@@ -11,19 +11,19 @@ coffee_shops_attributes = [
   {
     name:         "Lof10",
     address:      "Soho, Hong Kong",
-    wifi:         true,
+    wifi:         4,
     rating:        5
   },
   {
     name:         "Why50",
     address:      "Sheung Wan, Hong Kong",
-    wifi:         true,
+    wifi:         4,
     rating:        5
   },
   {
     name:         "Starbucks",
     address:      "Sheung Wan",
-    wifi:         true,
+    wifi:         4,
     rating:        3
   }
 ]
