@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'coffee_shops#index'
+  root to: 'pages#home'
   mount Attachinary::Engine => "/attachinary"
 
   resources :coffee_shops

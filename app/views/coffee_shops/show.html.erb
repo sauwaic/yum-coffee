@@ -3,3 +3,6 @@
 <h2> address: <%= @coffee_shop.address %> </h2>
 <h2> wifi: <%= @coffee_shop.wifi %> </h2>
 
+<% @coffee_shop.photos.each do |photo| %>
+  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+<% end %>

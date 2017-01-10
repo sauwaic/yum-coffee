@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper text-center">
+  <%= image_tag 'yum_coffee.png' %>
+</div>
+
+
+<%= link_to 'View all coffee shops', coffee_shops_path%>
+
+<br>
+<% @coffee_shops.each do |coffee_shop| %>
+<% coffee_shop.photos.each do |photo| %>
+  <%= link_to cl_image_tag(photo.path, width: 300, height: 300, crop: :fill), coffee_shop_path(coffee_shop) %>
+<% end %>
+<% end %>
+
