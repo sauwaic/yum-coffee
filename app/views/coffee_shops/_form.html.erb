@@ -7,8 +7,10 @@
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :district %>
-        <%= f.input :wifi, collection: 0..5 %>
         <%= f.input :rating, collection: 1..5 %>
+        <%= f.input :wifi, collection: 0..5 %>
+        <%= f.input :seating, collection: ["Less than 10", "10 - 25", "25 - 50", "Over 50"] %>
+        <%= f.input :website %>
         <%= f.input :photos, as: :attachinary %>
 
         <%= f.submit class: 'btn-primary'%>
