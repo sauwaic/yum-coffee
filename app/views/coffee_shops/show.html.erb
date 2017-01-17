@@ -1,8 +1,38 @@
-<h1> yum coffee at <%= @coffee_shop.name%> </h1>
 
-<h2> address: <%= @coffee_shop.address %> </h2>
-<h2> wifi: <%= @coffee_shop.wifi %> </h2>
+<nav class="w3-sidenav w3-hide-medium w3-hide-small" style="width: 600px">
 
-<% @coffee_shop.photos.each do |photo| %>
-  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-<% end %>
+  <div class="coffee-shop-content">
+    <%= image_tag 'yum-coffee-at.png', class: 'yum-coffee-at-img' %>
+
+    <div class="coffee-shop-description">
+
+      <h1 class="name-title"> <%= @coffee_shop.name%> </h1>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fugiat quaerat, ratione rem expedita voluptatibus error delectus, sit doloremque eius. Deserunt, perferendis? Repellendus nihil tempora, laborum labore voluptatibus placeat. Earum.</p>
+      <p> <span> RATING: </span> <%= @coffee_shop.rating %> </p>
+      <p> <span> DISTRICT: </span> <%= @coffee_shop.district %> </p>
+      <p> <span> ADDRESS: </span> <%= @coffee_shop.address %> </p>
+      <p> <span> WIFI: </span> <%= @coffee_shop.wifi %> </p>
+
+    </div>
+    <hr>
+  </div>
+
+</nav>
+
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-12 col-md-5">
+
+    </div>
+
+    <div class="col-xs-12 col-md-7">
+      <div class="coffee-shop-photos">
+        <% @coffee_shop.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, class: 'coffee-shop-img' %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
