@@ -6,9 +6,12 @@
   padding-top: 20px;
   margin-left: 60px;
   margin-right: 60px;
+    min-width: 300px;
+
 }
 .coffee-shop-description {
   padding: 10% 5%;
+  font-family: "Raleway", "Helvetica", "sans-serif";
   p {
     font-size: 16px;
   }
@@ -20,6 +23,8 @@
 .name-title {
   letter-spacing: 10px;
   margin-top: -8px;
+  text-transform: uppercase;
+  font-family: 'Julius Sans One', "sans-serif";
   text-decoration: bold;
 }
 .coffee-shop-photos {

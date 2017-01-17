@@ -1,0 +1,24 @@
+  <div class="coffee-shop-content">
+    <%= image_tag 'yum-coffee-at.png', class: 'yum-coffee-at-img' %>
+
+    <div class="coffee-shop-description">
+
+      <h1 class="name-title"> <%= coffee_shop.name%> </h1>
+
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fugiat quaerat, ratione rem expedita voluptatibus error delectus, sit doloremque eius. Deserunt, perferendis? Repellendus nihil tempora, laborum labore voluptatibus placeat. Earum.</p>
+
+      <p> <span> DISTRICT: </span> <%= coffee_shop.district %> </p>
+      <p> <span> ADDRESS: </span> <%= coffee_shop.address %> </p>
+      <p> <span> RATING: </span>
+        <% coffee_shop.rating.times do %>
+        <i class="fa fa-coffee" aria-hidden="true"></i>
+        <% end %>
+      </p>
+      <p> <span> WIFI: </span>
+        <% coffee_shop.wifi.times do %>
+        <i class="fa fa-coffee" aria-hidden="true"></i>
+        <% end %>
+      </p>
+      <hr>
+    </div>
+  </div>
