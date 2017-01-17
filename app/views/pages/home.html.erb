@@ -20,9 +20,23 @@
 
 <br>
 
-<h3 style="padding-left: 10px;"> Or click below for inspirations </h3>
-<% @coffee_shops.each do |coffee_shop| %>
-<% coffee_shop.photos.each do |photo| %>
-<%= link_to cl_image_tag(photo.path, width: 300, height: 300, crop: :fill), coffee_shop_path(coffee_shop) %>
-<% end %>
-<% end %>
+<div class="wrapper-inspirations">
+  <div class="row">
+    <% @coffee_shops.each do |coffee_shop| %>
+    <% coffee_shop.photos.each do |photo| %>
+    <div class="col-xs-6 col-md-4">
+      <div class="inspirations-card">
+        <%= link_to cl_image_tag(photo.path, width: 300, height: 300, crop: :fill), coffee_shop_path(coffee_shop) %>
+        <div class="inspirations-card-words">
+          <p> <%= coffee_shop.name %> </p>
+          <p> <%= coffee_shop.district %> </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+

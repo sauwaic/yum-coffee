@@ -4,7 +4,7 @@ class CoffeeShopsController < ApplicationController
   before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
 
   def index
-    @coffee_shops = CoffeeShop.all
+    @coffee_shops = CoffeeShop.order('name ASC')
   end
 
   def show

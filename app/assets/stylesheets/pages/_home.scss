@@ -2,3 +2,16 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.wrapper-inspirations {
+  width: 80%;
+  margin: auto;
+}
+.inspirations-card {
+  margin: auto;
+  padding-bottom: 80px;
+}
+.inspirations-card-words {
+  padding-top: 20px;
+  font-family: 'Julius Sans One', "sans-serif";
+  line-height: 10px;
+}

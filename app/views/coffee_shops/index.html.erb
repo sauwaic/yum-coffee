@@ -3,10 +3,10 @@
 </div>
 
 
-<h1>List of coffee shops</h1>
-
-<ul>
-<% @coffee_shops.each do |coffee_shop| %>
-  <li> <%= link_to coffee_shop.name, coffee_shop_path(coffee_shop) %> </li>
-<% end %>
-</ul>
+<div class="wrapper-list">
+  <ul>
+    <% @coffee_shops.each do |coffee_shop| %>
+    <li> <%= link_to coffee_shop.name, coffee_shop_path(coffee_shop), class: 'list-font' %> </li>
+    <% end %>
+  </ul>
+</div>
